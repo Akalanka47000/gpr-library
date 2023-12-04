@@ -19,7 +19,6 @@ jobs:
 
       - name: Publish to Github Package Registry
         run: |
-           echo registry=https://npm.pkg.github.com/akalanka470000 >> .npmrc
+           echo "@akalanka47000:registry=https://npm.pkg.github.com" >> .npmrc
+           echo "//npm.pkg.github.com/:_authToken=${{ secrets.REGISTRY_ACCESS_TOKEN }}" >> .npmrc
            npm publish
-        env:
-            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
