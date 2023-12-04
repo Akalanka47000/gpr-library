@@ -1,0 +1,25 @@
+name: publish
+run-name: Publish to Github Package Registry
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '18.x'
+
+      - name: Publish to Github Package Registry
+        run: |
+           echo registry=https://npm.pkg.github.com/akalanka470000 >> .npmrc
+           npm publish
+        env:
+            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

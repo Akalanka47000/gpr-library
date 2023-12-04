@@ -1,0 +1,19 @@
+{
+  "name": "@akalanka47000/gpr-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akalanka47000/gpr-library.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akalanka47000/gpr-library/issues"
+  },
+  "homepage": "https://github.com/Akalanka47000/gpr-library#readme"
+}
